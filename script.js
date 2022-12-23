@@ -1,3 +1,4 @@
+const clickMe = document.querySelector(".clickMe")
 const tiles = document.getElementById("tiles")
 const tileSize = 50
 let columns = Math.floor(document.body.clientWidth / 50)
@@ -16,8 +17,7 @@ const colors = [
 ]
 let counter = 0
 
-function handleClick(index) {
-  console.log(index)
+function animation(index) {
   anime({
     targets: ".tile",
     backgroundColor: colors[counter % (colors.length - 1)],
@@ -26,6 +26,16 @@ function handleClick(index) {
       from: index,
     }),
   })
+}
+
+clickMe.addEventListener("click", () => {
+  document.body.removeChild(clickMe)
+  animation(columns / 2 + (columns * rows) / 2)
+  counter++
+})
+
+function handleClick(index) {
+  animation(index)
   counter++
 }
 
