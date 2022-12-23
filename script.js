@@ -3,16 +3,16 @@ const tileSize = 50
 let columns = Math.floor(document.body.clientWidth / 50)
 let rows = Math.floor(document.body.clientHeight / 50)
 const colors = [
-  "#f94144",
-  "#f3722c",
-  "#f8961e",
-  "#f9844a",
-  "#f9c74f",
-  "#90be6d",
-  "#43aa8b",
-  "#4d908e",
-  "#577590",
-  "#277da1",
+  "#4d86a5",
+  "#cf0bf1",
+  "#12e2f1",
+  "#3e517a",
+  "#98da1f",
+  "#fc9f5b",
+  "#d60b2d",
+  "#c3c4e9",
+  "#9cc76d",
+  "#2dffdf",
 ]
 let counter = 0
 
