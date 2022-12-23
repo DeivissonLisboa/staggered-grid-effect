@@ -14,4 +14,13 @@ function createTiles(number) {
   })
 }
 
-createTiles(columns * rows)
+function createGrid() {
+  tiles.innerHTML = ""
+  columns = Math.floor(document.body.clientWidth / 50)
+  rows = Math.floor(document.body.clientHeight / 50)
+
+  createTiles(columns * rows)
+}
+
+createGrid()
+window.onresize = () => createGrid()
