@@ -1,6 +1,7 @@
 const tiles = document.getElementById("tiles")
-let columns = Math.floor(document.body.clientWidth / 50),
-  rows = Math.floor(document.body.clientHeight / 50)
+const tileSize = 50
+let columns = Math.floor(document.body.clientWidth / 50)
+let rows = Math.floor(document.body.clientHeight / 50)
 
 function createTile(index) {
   const tile = document.createElement("div")
@@ -16,9 +17,10 @@ function createTiles(number) {
 
 function createGrid() {
   tiles.innerHTML = ""
-  columns = Math.floor(document.body.clientWidth / 50)
-  rows = Math.floor(document.body.clientHeight / 50)
-
+  columns = Math.floor(document.body.clientWidth / tileSize)
+  rows = Math.floor(document.body.clientHeight / tileSize)
+  tiles.style.setProperty("--columns", columns)
+  tiles.style.setProperty("--rows", rows)
   createTiles(columns * rows)
 }
 
